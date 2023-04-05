@@ -7,10 +7,14 @@ public class PlayerMovementBehaviour : MonoBehaviour
     private Rigidbody _rb;
     private Vector2 _moveDirection;
 
-    public float Acceleration;
-    public float MaxSpeed;
-    public float JumpPower;
-    public GroundColliderBehaviour GroundCollider;
+    [SerializeField]
+    private float _acceleration;
+    [SerializeField]
+    private float _maxSpeed;
+    [SerializeField]
+    private float _jumpPower;
+    [SerializeField]
+    private GroundColliderBehaviour _groundCollider;
 
     // Start is called before the first frame update
 
@@ -26,17 +30,17 @@ public class PlayerMovementBehaviour : MonoBehaviour
 
     public void Jump()
     {
-        if (GroundCollider.IsGrounded)
-            _rb.AddForce(Vector3.up * JumpPower, ForceMode.Impulse);
+        if (_groundCollider.IsGrounded)
+            _rb.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
     }
 
     // Update is called once per frame
 
     private void FixedUpdate()
     {
-        float acceleration = Acceleration;
+        float acceleration = _acceleration;
 
-        if (!GroundCollider.IsGrounded)
+        if (!_groundCollider.IsGrounded)
 
         _rb.AddForce(_moveDirection * acceleration * Time.deltaTime, ForceMode.VelocityChange);        
     }
