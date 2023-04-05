@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3350988339194156666}
   - component: {fileID: 3350988339194156665}
   - component: {fileID: 3350988339194156664}
-  - component: {fileID: 3350988339194156550}
+  - component: {fileID: 3216039639892729020}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -113,7 +113,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &3350988339194156664
 MonoBehaviour:
@@ -131,7 +131,7 @@ MonoBehaviour:
   _maxSpeed: 20
   _jumpPower: 8
   _groundCollider: {fileID: 3350988339250121843}
---- !u!114 &3350988339194156550
+--- !u!114 &3216039639892729020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,10 +140,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3350988339194156671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b2325b0ce52584aba6d6195411442e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c7a0aacdbdd7f4429d371111909f762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNum: 0
+  _isEnemy: 0
+  _scoreMultiplier: 3
+  _score: 0
+  _deathWall: 0
 --- !u!1 &3350988339250121846
 GameObject:
   m_ObjectHideFlags: 0

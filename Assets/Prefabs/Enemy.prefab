@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7919319431058073471}
   - component: {fileID: 4946306029624404729}
   - component: {fileID: 4866232575234484463}
+  - component: {fileID: -8710729416705826368}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b6bb5371526200543ae791a8de371bc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,5 +127,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 3350988339194156671, guid: 5982dc3ff30e3f04bb176cdf95a5e1ea, type: 3}
-  _moveForce: 5
-  _maxVelocity: 5
+  _maxVelocity: 20
+--- !u!114 &-8710729416705826368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510050203637983431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87cf2359043b0824f8e92860ee57fa40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathWall: 0
