@@ -27,7 +27,7 @@ public class EnemyCollisionBehaviour : MonoBehaviour
         if (_deathWall == true)
         {
             //...set enemy to not active
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
