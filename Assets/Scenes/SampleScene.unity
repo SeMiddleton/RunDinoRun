@@ -661,10 +661,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -693,6 +693,7 @@ GameObject:
   - component: {fileID: 765406874}
   - component: {fileID: 765406873}
   - component: {fileID: 765406875}
+  - component: {fileID: 765406876}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -732,7 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.35998964, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.6275472, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -775,6 +776,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1996794435}
   _scoreText: {fileID: 765406873}
+--- !u!114 &765406876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765406871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &876850164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,10 +1264,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1326,7 +1342,7 @@ GameObject:
   - component: {fileID: 1684098322}
   - component: {fileID: 1684098323}
   m_Layer: 0
-  m_Name: Flying Enemy Spawner 2
+  m_Name: Cloud Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1358,7 +1374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04091ae5f8080c04f82bcc9258784f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnObject: {fileID: 1510050203637983431, guid: b11333f88334ee940b0cf303a84afdd8, type: 3}
+  _spawnObject: {fileID: 5212333123362599934, guid: 180c6d9676ae09945ba86b8a6af2e142, type: 3}
   _timeBetweenSpawns: 2
   _canSpawn: 1
   _enemyTarget: {fileID: 1996794427}
@@ -1534,10 +1550,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
