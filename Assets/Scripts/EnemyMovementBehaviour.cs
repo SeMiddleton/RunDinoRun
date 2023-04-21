@@ -13,6 +13,7 @@ public class EnemyMovementBehaviour : MonoBehaviour
     [SerializeField]
     private float _maxVelocity;
 
+    //Sets the target for the enemy. (Stretch goal to hyave the enemy intentionally target the player)
     public GameObject Target
     {
         get

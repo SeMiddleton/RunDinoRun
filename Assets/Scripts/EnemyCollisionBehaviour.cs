@@ -6,11 +6,11 @@ public class EnemyCollisionBehaviour : MonoBehaviour
 {
     [SerializeField]
     private bool _deathWall;
-    
-   /// <summary>
-   /// Checks to see if the enemy has collided with a death wall
-   /// </summary>
-   /// <param name="collision"></param>
+
+    /// <summary>
+    /// Checks to see if the enemy has collided with a death wall
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         //If not...
@@ -19,8 +19,8 @@ public class EnemyCollisionBehaviour : MonoBehaviour
             return;
 
         //If true...
-        if(collision.gameObject.CompareTag("Death Wall"))
-           //...set deathwall to true
+        if (collision.gameObject.CompareTag("Death Wall"))
+            //...set deathwall to true
             _deathWall = true;
 
         //If deathwall is true

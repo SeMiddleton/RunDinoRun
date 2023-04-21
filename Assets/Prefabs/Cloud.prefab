@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 921907774412425837}
   - component: {fileID: -124257324207174283}
   - component: {fileID: -6801883267164626609}
-  - component: {fileID: 6614801433388159102}
+  - component: {fileID: 5966260535897084793}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Untagged
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _maxVelocity: 17
---- !u!114 &6614801433388159102
+--- !u!114 &5966260535897084793
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5212333123362599934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87cf2359043b0824f8e92860ee57fa40, type: 3}
+  m_Script: {fileID: 11500000, guid: bfa11c66167beef49ba56e39b9660bba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _deathWall: 0

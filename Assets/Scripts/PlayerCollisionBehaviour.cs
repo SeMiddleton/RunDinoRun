@@ -17,8 +17,10 @@ public class PlayerCollisionBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checks to make sure the player hasn't collided with an enemy
         if (!_isEnemy)
         {
+            //If the haven't, their score will increase
             Score += _scoreMultiplier * Time.deltaTime;
         }
     }
@@ -42,10 +44,19 @@ public class PlayerCollisionBehaviour : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }        
     }
+
+    /// <summary>
+    /// Function responsible for the player's respawn
+    /// </summary>
     public void Respawn()
-    {            
-            _isEnemy = false;
-            gameObject.SetActive(true);
-            transform.position = SpawnPoint.position;
+    {   
+        //Resets the player's boolean that says they've collided with an enemy
+        _isEnemy = false;
+        //Sets the player to be active again
+        gameObject.SetActive(true);
+        //Has the player spawn at a predetermined location
+        transform.position = SpawnPoint.position;
+        //Resets the score to 0
+        Score = 0;
     }
 }

@@ -21,6 +21,7 @@ public class ScoreBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Changes the score with each frame.
         _scoreText.text = _startText + "" + (int)Player.Score;
     }
 }
