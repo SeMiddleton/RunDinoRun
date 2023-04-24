@@ -10,6 +10,8 @@ public class PlayerMovementBehaviour : MonoBehaviour
     [SerializeField]
     private float _acceleration;
     [SerializeField]
+    private float _numberOfJumps = 2;
+    [SerializeField]
     private float _maxSpeed;
     [SerializeField]
     private float _jumpPower;
@@ -27,19 +29,20 @@ public class PlayerMovementBehaviour : MonoBehaviour
     /// <summary>
     /// Future function for future projects
     /// </summary>
-    /// <param name="direction"></param>
-    //public void SetMoveDirection(Vector3 direction)
-    //{
-    //    _moveDirection = direction;
-    //}
+    ///   <param name="direction"></param>
+    public void SetMoveDirection(Vector3 direction)
+    {
+        _moveDirection = direction;
+    }
 
     //Function that is called when the player jumps.
     public void Jump()
     {
-        //Checks to see if the player is on the ground
-        if (_groundCollider.IsGrounded)
+        //Checks to see if the player is on the ground or has an extra jump
+        if (_groundCollider.IsGrounded || _numberOfJumps > 0)
             //If so, allow the player to jump
             _rb.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
+            _numberOfJumps--;
     }
 
     // Update is called once per frame
@@ -50,8 +53,10 @@ public class PlayerMovementBehaviour : MonoBehaviour
         float acceleration = _acceleration;
 
         //Only allows the player to move forward if the player is on the ground
-        if (!_groundCollider.IsGrounded)
+        if (_groundCollider.IsGrounded)
+        _rb.AddForce(_moveDirection * acceleration * Time.deltaTime, ForceMode.VelocityChange);
 
-        _rb.AddForce(_moveDirection * acceleration * Time.deltaTime, ForceMode.VelocityChange);        
+        //Resets the player's jump count after landing on ground
+        _numberOfJumps = 1;
     }
 }
